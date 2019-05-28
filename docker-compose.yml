@@ -1,0 +1,75 @@
+version: "3.1"
+
+services:
+  drupal:
+    image: lliccien/nginx-php:tigoune
+    container_name: tigo_selfcare_prod_drupal
+    ports:
+      - 80:80
+    volumes:
+      - ./:/var/www/html/
+      - ./logs:/var/log/nginx/
+    links:
+      - mysql
+    environment:
+      PHP_XDEBUG_ENABLED: 1 # Set 1 to enable.
+      XDEBUG_CONFIG: remote_host=host.docker.internal
+    networks:
+      net:
+        ipv4_address: 172.21.0.3
+
+  mysql:
+    image: mysql:5.7
+    container_name: tigo_selfcare_prod_mysql
+    command: --max_allowed_packet=1073741824
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: tigo_selfcare_co
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    networks:
+      net:
+        ipv4_address: 172.21.0.2
+
+  #For use with postgres
+  #drupal_postgres:
+  #  image: lliccien/nginx-php:tigoune
+  #  container_name: tigo_selfcare_prod_drupal
+  #  ports:
+  #    - 8080:8080
+  #  volumes:
+  #    - ./pg:/var/www/html/
+  #    - ./pg/logs:/var/log/nginx/
+  #  links:
+  #    - postgres
+  #  environment:
+  #    PHP_XDEBUG_ENABLED: 1 # Set 1 to enable.
+  #    XDEBUG_CONFIG: remote_host=host.docker.internal
+  #  networks:
+  #    net:
+  #      ipv4_address: 172.21.0.5
+  #For use with drupal
+  #postgres:
+  #  image: postgres:11.3
+  #  container_name: tigo_selfcare_prod_postgresql
+  #  ports:
+  #    - 5432:5432
+  #  environment:
+  #    POSTGRES_USER: root
+  #    POSTGRES_PASSWORD: 123456
+  #    POSTGRES_DB: tigo_selfcare_co
+  #  volumes:
+  #    - ./postgresql_data:/var/lib/postgresql/data
+  #  networks:
+  #    net:
+  #      ipv4_address: 172.21.0.4
+
+networks:
+  net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.21.0.0/16

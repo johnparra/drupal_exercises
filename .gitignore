@@ -37,3 +37,9 @@ xmlrpc.php
 /profiles
 /scripts
 /themes
+
+# Ignore core vendor directories
+core/*
+vendor/*
+mysql_data/*
+logs/*
