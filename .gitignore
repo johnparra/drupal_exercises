@@ -39,7 +39,6 @@ xmlrpc.php
 /themes
 
 # Ignore core vendor directories
-core/*
 vendor/*
 mysql_data/*
 logs/*
