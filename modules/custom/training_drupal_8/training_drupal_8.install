@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Install functions for the training_drupal_8 module.
+ */
+
+
+function training_drupal_8_install() {
+  /**
+  \Drupal::config('training_drupal_8.settings')
+      ->set('status', 'mystatus')
+      ->save();
+  */
+
+  $new_term = \Drupal\taxonomy\Entity\Term::create([
+            'vid' => 'newterm',
+            'name' => 'New Term',
+      ]);
+
+  $new_term->enforceIsNew();
+  $new_term->save();
+  
+}

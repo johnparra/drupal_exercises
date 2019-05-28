@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Contains training_drupal_8.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function training_drupal_8_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.training_drupal_8':
+      $output = '';
+      $output .= '<p>' . t('Esta es la ayuda del módulo training_drupal_8') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function training_drupal_8_uninstall(){
+  #$tids = \Drupal::entityQuery('taxonomy')
+  #  ->condition('vid', 'new_term')
+  #  ->execute();
+#
+  #$controller = \Drupal::entityTypeManager()->getStorage('taxonomy');
+  #$entities = $controller->loadMultiple($tids);
+  #$controller->delete($entities);
+}

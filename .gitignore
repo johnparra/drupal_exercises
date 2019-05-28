@@ -33,12 +33,11 @@ update.php
 xmlrpc.php
 /includes
 /misc
-/modules
+#/modules
 /profiles
 /scripts
 /themes
 
 # Ignore core vendor directories
-vendor/*
 mysql_data/*
 logs/*

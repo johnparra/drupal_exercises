@@ -1,0 +1,7 @@
+name: 'training_drupal_8'
+type: module
+description: 'Training Drupal 8'
+core: 8.x
+package: 'BITS'
+dependencies:
+  - ctools
