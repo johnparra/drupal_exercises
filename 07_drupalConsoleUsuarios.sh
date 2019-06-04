@@ -13,3 +13,14 @@
 #
 #Crea los permisos 'access user block' y 'configure extra user data'. Asigna los permisos al rol Gestor(Crear el rol si no existe). El usuario autenticado también podrá ver el bloque ('access user block').
 #Modifica el acceso al bloque UserBlock para que solo se muestre a usuarios que tengan el permiso 'access user block'. La validación se cacheará por usuario.
+
+drupal generate:module \
+--module="bits_users"  \
+--machine-name="bits_users"  \
+--module-path="modules/custom"  \
+--description="Bits Users"  \
+--core="8.x" \
+--package="BITS"  \
+--twigtemplate
+
+drupal module:install bits_users

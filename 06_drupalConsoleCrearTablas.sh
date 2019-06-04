@@ -16,3 +16,14 @@
 #lastcount. int para almacenar un timestamp. 
 #La clave primaria estará compuesta por los campos route y uid. 
 #Instalar el módulo y comprobar que las tablas se hayan creado en la base de datos. 
+
+drupal generate:module \
+--module="bits_database"  \
+--machine-name="bits_database"  \
+--module-path="modules/custom"  \
+--description="Bits Database"  \
+--core="8.x" \
+--package="BITS"  \
+--twigtemplate
+
+drupal module:install bits_database

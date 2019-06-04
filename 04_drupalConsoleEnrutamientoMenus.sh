@@ -22,8 +22,8 @@ drupal module:install bits_pages
 ## Ejercicio 2
 #Define la ruta bits_pages.calculator (bits_pages.routing.yml), dentro del módulo BITS Pages (bits_pages), y su método controlador.
 #Esta página es una calculadora (suma,resta,división,multiplicación, resto de la división)
-#Añade a la ruta los parámetros opcionales 20 y 10.
-#Comprueba el funcionamiento de la página, incluyendo varias combinaciones de parámetros y forzando la división por cero.
+#Añade a la ruta los parámetros opcionales 20 y 10 TODO.
+#Comprueba el funcionamiento de la página, incluyendo varias combinaciones de parámetros y forzando la división por cero TODO.
 
 drupal generate:controller  \
   --module="bits_pages"  \
@@ -52,6 +52,7 @@ drupal generate:controller  \
 #Modifica los permisos de la ruta 'bits_pages.calculator' para que solo se pueda acceder con el permiso 'access calculator'.
 #Modifica los permisos de la ruta 'bits_pages.links' para que siempre se pueda acceder.
 #Comprueba el acceso a las diferentes rutas (y a los menús) entrando como usuario demouser y como usuario anónimo.
+drupal module:install masquerade
 
 ## Ejercicio 5
 #Realiza las siguientes tareas dentro del módulo BITS Pages (bits_pages):

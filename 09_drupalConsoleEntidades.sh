@@ -31,3 +31,14 @@
 #3. Crea el tipo de contenido News. Crea al menos dos nodos de este tipo, con URLs news/news1 y news/news2. 
 #
 #4. Desde la interfaz, crea el bundle Basic (basic) en la entidad Message, y añade 3 mensajes destinados al usuario admin (escritos por otros usuarios). Asigna los permisos adecuados a los usuarios registrados para que puedan publicar mensajes.
+
+drupal generate:module \
+--module="bits_entities"  \
+--machine-name="bits_entities"  \
+--module-path="modules/custom"  \
+--description="Bits Entities"  \
+--core="8.x" \
+--package="BITS"  \
+--twigtemplate
+
+drupal module:install bits_entities

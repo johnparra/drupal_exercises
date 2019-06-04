@@ -7,6 +7,17 @@
 #Inyecta en el formulario los servicios database y current_user. 
 #Asigna a los campos Nombre de usuario y Correo electrónico los valores por defecto correspondientes, en función del usuario actual. 
 
+drupal generate:module \
+--module="bits_forms"  \
+--machine-name="bits_forms"  \
+--module-path="modules/custom"  \
+--description="Bits Forms"  \
+--core="8.x" \
+--package="BITS"  \
+--twigtemplate
+
+drupal module:install bits_forms
+
 ## Ejercicio 2
 #Realiza las siguientes acciones de validación en el formulario Simple Form creado en el ejercicio 1. 
 #
