@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains bits_entities.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function bits_entities_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the bits_entities module.
+    case 'help.page.bits_entities':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Bits Entities') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function bits_entities_theme() {
+  return [
+    'bits_entities' => [
+      'render element' => 'children',
+    ],
+  ];
+}
