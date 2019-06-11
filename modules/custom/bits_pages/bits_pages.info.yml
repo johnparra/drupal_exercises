@@ -1,5 +1,6 @@
-name: 'bits_pages'
+name: "bits_pages"
 type: module
-description: 'Bits Pages'
+description: "Bits Pages"
 core: 8.x
-package: 'BITS'
+package: "BITS"
+version: 1.0

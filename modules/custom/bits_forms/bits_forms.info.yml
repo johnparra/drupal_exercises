@@ -1,5 +1,6 @@
-name: 'bits_forms'
+name: "bits_forms"
 type: module
-description: 'Bits Forms'
+description: "Bits Forms"
 core: 8.x
-package: 'BITS'
+package: "BITS"
+version: 1.0

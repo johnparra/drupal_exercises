@@ -1,0 +1,7 @@
+access calculator:
+  title: "Acceso a la calculadora"
+  description: "Permite acceder a la calculadora"
+
+access simple:
+  title: "Acceso al texto simple"
+  description: "Permite acceder al texto simple"

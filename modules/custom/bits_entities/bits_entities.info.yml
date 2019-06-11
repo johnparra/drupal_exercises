@@ -1,5 +1,6 @@
-name: 'bits_entities'
+name: "bits_entities"
 type: module
-description: 'Bits Entities'
+description: "Bits Entities"
 core: 8.x
-package: 'BITS'
+package: "BITS"
+version: 1.0

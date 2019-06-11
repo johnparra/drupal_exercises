@@ -1,5 +1,6 @@
-name: 'bits_database'
+name: "bits_database"
 type: module
-description: 'Bits Database'
+description: "Bits Database"
 core: 8.x
-package: 'BITS'
+package: "BITS"
+version: 1.0
